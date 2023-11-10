@@ -19,22 +19,22 @@ public class Triangle extends TwoDshape implements Rotate,shape{
         this.side3=side3;
         this.colour=colour;
         this.rotation=0.0;
-        //The constructor is used to set the area of a Triangle using heron's formula
+        //Heron's method is used to set the area of the triangle
         double s=0.5*(side1+side2+side3);
         double q=s*(s-side1)*(s-side2)*(s-side3);
         this.area=Math.pow(q,0.5);
         this.heronHeight=heronHeight();
   }
   
-  double heronHeight(){
+  protected double heronHeight(){
     //To find the heronHeight of a triangle
     heronHeight=2*area/(Math.max(Math.max(side1,side2),Math.max(side1,side3)));
     return heronHeight;
   }
 @Override
   public void setArea(double area){
-    //Setter of area using heron's formula
-     this.area=area;
+    //Setter of area. Heron's formula is used
+    this.area=area;
 }
 @Override
   public double getArea(){
@@ -45,7 +45,6 @@ public class Triangle extends TwoDshape implements Rotate,shape{
     //Setter of colour
     this.colour=colour;
   }
-
   public Colour getColour(){
     //Getter of colour
     return colour;
@@ -53,7 +52,7 @@ public class Triangle extends TwoDshape implements Rotate,shape{
   
   public String toString(){
     // toString method . To compute the colour and the rotation of the object, the class triangle is instantiated.
-      return "shape:"+"Triangle"+" "+"side1:"+this.side1+" "+"side2:"+ this.side2+" "+"side3: "+this.side3+" "+"Colour:"+this.getColour()+" "+"Rotation(Degree):"+this.getRotation();
+      return "shape:"+"Triangle"+" "+"side1:"+side1+" "+"side2:"+ side2+" "+"side3: "+side3+" "+"Colour:"+ getColour()+" "+"Rotation(Degree):"+ getRotation()+" "+"heronHeight:"+ heronHeight;
        
   }
 @Override

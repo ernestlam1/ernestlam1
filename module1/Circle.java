@@ -2,7 +2,7 @@ package module1;
 public class Circle extends TwoDshape implements shape {
     private double radius;
     public final double PI=Math.PI;
-       public double area;
+    private double area;
     
     public Circle(double radius,Colour colour){
         super(colour);
@@ -22,7 +22,7 @@ public class Circle extends TwoDshape implements shape {
     }
 @Override  
        public void setArea(double area){
-            this.area=area;
+        this.area=area;
        }
 @Override
        public double getArea(){
@@ -30,7 +30,7 @@ public class Circle extends TwoDshape implements shape {
        }
        public String toString(){
         //toString method, the class circle is instantiated to get the colour of the object
-            return "shape :" + "Circle"+" "+"radius:"+" "+ this.radius +" "+"Colour:"+ this.getColour();
+            return "shape :" + "Circle"+" "+"radius:"+" "+ radius +" "+"Colour:"+ getColour();
        }
    }
 

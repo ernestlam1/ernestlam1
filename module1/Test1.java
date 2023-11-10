@@ -2,8 +2,7 @@ package module1;
 import java.util.ArrayList;
   // The interface shpae is implemented by class Triangle and class Circle
 interface shape{
-  //The parameters of class triangle and class circle are the same for the setArea method
-  void setArea(double area);
+  //The parameters of the setter method in class triangle and class circle are combined
   double getArea();
   String toString();
 }
@@ -17,11 +16,12 @@ public class Test1  {
        Triangle o= new Triangle(3,4,5,Colour.GREEN);
        Triangle L= new Triangle(4,8,10,Colour.NONE);
        Triangle P=new Triangle(6,13,18,Colour.RED);
+       // The circles and triangles above are added to the ArrayList n
        n.add(j);
-       n.add(o);
        n.add(k);
-       n.add(L);
        n.add(M);
+       n.add(L);
+       n.add(o);
        n.add(P);
        for(shape a: n){
         // Test for the getArea and toString methods

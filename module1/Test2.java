@@ -10,9 +10,9 @@ public class Test2 {
     // Test cases will be written here
 @Test
     public void testcirclegetArea(){
-        Circle k= new Circle(5,Colour.RED);
+        Circle k= new Circle(6,Colour.RED);
         double actualvalue=Math.round(k.getArea()*100)/100;
-        double expectedvalue=78.0;
+        double expectedvalue=113.0;
         Assert.assertEquals(expectedvalue,actualvalue,0.01);
     }
 @Test

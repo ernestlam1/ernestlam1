@@ -15,6 +15,7 @@ abstract class TwoDshape{
         this.width=width;
         this.height=height;
     }
+    public abstract void setArea(double area);
     public abstract double getArea();
     public Colour getColour(){
       return colour;
@@ -37,7 +38,7 @@ abstract class TwoDshape{
     }
     public String toString(){
       // The toString method should display the features of TwoDshape
-      return "shape:"+ "TwoDshape"+" " +"Colour:"+this.getColour();
+      return "shape:"+ "TwoDshape"+" " +"Colour:"+ getColour();
     }
 }
 
